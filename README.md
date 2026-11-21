@@ -142,3 +142,16 @@ The dashboard uses manually copied data and fixed summary values. Rerunning Pyth
 - Category order counts are not additive because an order can contain multiple categories.
 - Findings are descriptive and do not establish causation.
 - The source download URL and dataset license still need to be documented before redistributing the raw data.
+
+## Pipeline Automation
+
+Run all four processing scripts with:
+
+python run_pipeline.py
+
+The pipeline stops if a script fails. Data preparation checks for
+missing values, blank text, duplicate Row IDs, invalid shipping dates,
+non-positive sales or quantities, fractional quantities and invalid discounts.
+
+CSV reports are regenerated automatically. The Excel dashboard still
+requires a manual update. Existing outputs may remain after a failed run.
