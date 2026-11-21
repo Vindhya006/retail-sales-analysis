@@ -131,6 +131,10 @@ Open `reports/retail_sales_dashboard.xlsx` to view it.
 
 The dashboard uses manually copied data and fixed summary values. Rerunning Python does not automatically refresh the workbook.
 
+## Dashboard Preview
+
+![Retail sales dashboard showing business metrics, monthly sales and sub-category profit changes](images/dashboard.png)
+
 ## Validation and Limitations
 
 - SQL overall totals and category results matched the Python analysis.
