@@ -1,0 +1,22 @@
+# Python virtual environments
+.venv/
+.venv313/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Local database — recreated by load_database.py
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+
+# Raw and prepared datasets — exclude until sharing rights are confirmed
+data/*.xls
+data/*.xlsx
+data/processed/
+
+# Temporary Excel files
+~$*
