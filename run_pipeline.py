@@ -11,6 +11,7 @@ SCRIPTS = [
     "analyze_sales.py",
     "sql_analysis.py",
     "rank_products.py",
+    "yearly_growth.py",
 ]
 
 
