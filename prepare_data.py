@@ -84,6 +84,48 @@ print(orders["Postal Code"].head(10).tolist())
 # Create a separate copy for analysis.
 clean_orders = orders.copy()
 
+# Stop preparation if the dataset violates our validation rules.
+validation_checks = {
+    "Dataset is empty": orders.empty,
+    "Missing values": orders.isna().any().any(),
+    "Duplicate Row IDs": orders["Row ID"].duplicated().any(),
+    "Ship date before order date": (
+        orders["Ship Date"] < orders["Order Date"]
+    ).any(),
+    "Sales zero or negative": (orders["Sales"] <= 0).any(),
+    "Quantity zero or negative": (orders["Quantity"] <= 0).any(),
+    "Fractional quantities": (orders["Quantity"] % 1 != 0).any(),
+    "Discount outside 0–1": (
+        (orders["Discount"] < 0) | (orders["Discount"] > 1)
+    ).any(),
+}
+
+# Check for empty or whitespace-only text.
+for column in orders.select_dtypes(
+    include=["object", "string"]
+).columns:
+    validation_checks[f"Blank text in {column}"] = (
+        orders[column]
+        .astype("string")
+        .str.strip()
+        .eq("")
+        .any()
+    )
+
+failed_checks = [
+    name
+    for name, failed in validation_checks.items()
+    if failed
+]
+
+if failed_checks:
+    raise ValueError(
+        "Data validation failed:\n- "
+        + "\n- ".join(failed_checks)
+    )
+
+print("\nData validation passed.")
+
 # Remove spaces at the start and end of text values.
 text_columns = clean_orders.select_dtypes(
     include=["object", "string"]
