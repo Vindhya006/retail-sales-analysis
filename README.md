@@ -142,6 +142,9 @@ The dashboard uses manually copied data and fixed summary values. Rerunning Pyth
 - Category order counts are not additive because an order can contain multiple categories.
 - Findings are descriptive and do not establish causation.
 - The source download URL and dataset license still need to be documented before redistributing the raw data.
+- Manually tested an invalid discount of 1.5 (150%): validation
+  rejected it and stopped the pipeline before downstream scripts ran.
+- Removed the temporary test value and confirmed a successful full run.
 
 ## Pipeline Automation
 
