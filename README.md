@@ -129,7 +129,19 @@ The dashboard includes:
 
 Open `reports/retail_sales_dashboard.xlsx` to view it.
 
-The dashboard uses manually copied data and fixed summary values. Rerunning Python does not automatically refresh the workbook.
+### Refreshing the dashboard
+
+1. Run the analysis pipeline:
+   .\.venv313\Scripts\python.exe .\run_pipeline.py
+2. Open reports/retail_sales_dashboard.xlsx.
+3. Select Data → Refresh All and wait for the refresh to finish.
+4. Save the workbook.
+
+Python regenerates the CSV reports. Excel Power Query imports the
+reports, and dashboard formulas reference the imported KPI data.
+
+Excel refresh is manually triggered. On another computer, update
+the query source paths through Data → Get Data → Data Source Settings.
 
 ## Dashboard Preview
 

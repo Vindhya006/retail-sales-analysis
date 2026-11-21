@@ -330,3 +330,18 @@ PROFIT_CHANGE_FILE = OUTPUT_DIR / "subcategory_profit_changes.csv"
 profit_comparison.to_csv(PROFIT_CHANGE_FILE, index=False)
 
 print(f"\nProfit comparison saved: {PROFIT_CHANGE_FILE}")
+
+# Export overall metrics for the Excel dashboard.
+kpi_summary = pd.DataFrame([{
+    "Total Sales": total_sales,
+    "Total Profit": total_profit,
+    "Profit Margin": total_profit / total_sales,
+    "Distinct Orders": total_orders,
+    "Distinct Customers": total_customers,
+    "Average Order Value": average_order_value
+}])
+
+KPI_FILE = OUTPUT_DIR / "kpi_summary.csv"
+kpi_summary.to_csv(KPI_FILE, index=False)
+
+print(f"\nKPI summary saved: {KPI_FILE}")
