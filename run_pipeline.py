@@ -10,6 +10,7 @@ SCRIPTS = [
     "load_database.py",
     "analyze_sales.py",
     "sql_analysis.py",
+    "rank_products.py",
 ]
 
 

@@ -1,0 +1,10 @@
+category,profit_rank,product_id,product_name,total_sales,total_profit
+Furniture,1,FUR-CH-10004086,Hon 4070 Series Pagoda Armless Upholstered Stacking Chairs,4346.78,1032.72
+Furniture,2,FUR-CH-10004495,"Global Leather and Oak Executive Chair, Black",3089.68,726.23
+Furniture,3,FUR-CH-10004287,SAFCO Arco Folding Chair,2955.34,602.11
+Office Supplies,1,OFF-BI-10001359,GBC DocuBind TL300 Electric Binding System,10943.28,1910.59
+Office Supplies,2,OFF-BI-10003925,Fellowes PB300 Plastic Comb Binding Machine,5063.31,1763.05
+Office Supplies,3,OFF-FA-10002780,Staples,5245.26,1369.93
+Technology,1,TEC-CO-10004722,Canon imageCLASS 2200 Advanced Copier,35699.9,15679.96
+Technology,2,TEC-CO-10001449,Hewlett Packard LaserJet 3310 Copier,9239.85,3623.94
+Technology,3,TEC-CO-10003236,Canon Image Class D660 Copier,3959.93,1691.97
