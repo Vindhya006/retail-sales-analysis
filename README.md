@@ -148,7 +148,7 @@ The dashboard uses manually copied data and fixed summary values. Rerunning Pyth
 
 ## Pipeline Automation
 
-Run all four processing scripts with:
+Run all six processing scripts with:
 
 python run_pipeline.py
 
